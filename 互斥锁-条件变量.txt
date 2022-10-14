@@ -1,0 +1,49 @@
+#include <pthread.h>  
+#include <semaphore.h>
+#include <unistd.h>  
+#include <stdio.h>
+#include<fcntl.h>
+#include <pthread.h>
+#include <errno.h>
+
+int index = 1;
+pthread_mutex_t lock;
+pthread_cond_t cond;
+
+void fun1(void){
+    while(index<50){        
+      pthread_mutex_lock(&lock);    
+      index++;
+      printf("In fun1 : %d\n",index);
+      pthread_cond_signal(&cond);
+      pthread_mutex_unlock(&lock);
+      usleep(0.1);
+    }
+}
+void fun2(void){
+    int i=0;
+    while(i<70){
+      pthread_mutex_lock(&lock);
+      while(index%3!=0){
+          pthread_cond_wait(&cond,&lock);
+      }
+      printf("%d\n",index/3);
+      i++;
+      pthread_mutex_unlock(&lock);
+      usleep(0.1);
+    }
+}
+
+int main(){
+    pthread_mutex_init(&lock,NULL);
+    pthread_cond_init(&cond,NULL);
+
+    pthread_t tid1,tid2,tid3;
+    pthread_create(&tid1,NULL,(void*)fun1,NULL);
+    pthread_create(&tid2,NULL,(void*)fun1,NULL);
+    pthread_create(&tid3,NULL,(void*)fun2,NULL);
+
+    pthread_join(tid1,NULL);
+    pthread_join(tid2,NULL);
+    pthread_join(tid3,NULL);
+}
