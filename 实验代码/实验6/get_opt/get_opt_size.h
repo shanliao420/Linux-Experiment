@@ -1,0 +1,1 @@
+int get_opt_size(int argc);
