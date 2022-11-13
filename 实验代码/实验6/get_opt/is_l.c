@@ -5,20 +5,10 @@
 
 // 判断是否有-l 参数 有返回1 无返回0
 int is_l(int argc, char const *argv[]){
-    switch (get_opt_size(argc))
-    {
-    case 1:
+    if(get_opt_size(argc) >= 1){
         if(!strcmp("-l", argv[1])){
             return 1;
         }
-        break;
-    case 2:
-        if(!strcmp("-l", argv[2])){
-            return 1;
-        }
-        break;
-    default:
-        return 0;
     }
     return 0;
 }
