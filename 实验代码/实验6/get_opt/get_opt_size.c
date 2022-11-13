@@ -6,8 +6,8 @@ int get_opt_size(int argc){
     return argc - 1;
 }
 
-int main(int argc, char const *argv[])
-{
-    printf("%d\n", get_opt_size(argc));
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     printf("%d\n", get_opt_size(argc));
+//     return 0;
+// }

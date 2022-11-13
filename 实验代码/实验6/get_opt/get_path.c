@@ -7,8 +7,8 @@ char* get_path(int argc, char const *argv[]){
 
 
 
-int main(int argc, char const *argv[])
-{
-    printf("the input path is %s\n", get_path(argc, argv));
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     printf("the input path is %s\n", get_path(argc, argv));
+//     return 0;
+// }

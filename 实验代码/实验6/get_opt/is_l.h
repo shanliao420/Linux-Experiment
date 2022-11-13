@@ -1,1 +1,1 @@
-int is_l(char const *argv[]);
+int is_l(int argc,char const *argv[]);

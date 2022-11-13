@@ -25,14 +25,14 @@ int is_l(int argc, char const *argv[]){
 
 
 
-int main(int argc, char const *argv[])
-{
-    if(is_l(argc, argv)){
-        printf("have -l parameter\n");
-    }else{
-        printf("no -l parameter\n");
-    }
+// int main(int argc, char const *argv[])
+// {
+//     if(is_l(argc, argv)){
+//         printf("have -l parameter\n");
+//     }else{
+//         printf("no -l parameter\n");
+//     }
 
 
-    return 0;
-}
+//     return 0;
+// }
