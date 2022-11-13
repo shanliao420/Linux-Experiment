@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 {
     
     int size = get_opt_size(argc);
-    int have_l = is_l(argv);
+    int have_l = is_l(argc, argv);
     switch (size)
     {
     case 0:
