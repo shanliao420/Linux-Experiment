@@ -226,9 +226,9 @@ void show_file_all_info(char* path){
 
 
 
-int main(int argc, char const *argv[])
-{
-    char* path = "./";
-    show_file_all_info(path);
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     char* path = "./";
+//     show_file_all_info(path);
+//     return 0;
+// }
