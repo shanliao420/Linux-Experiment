@@ -8,7 +8,7 @@
 
 ### 完成的函数接口
 
-"""
+```
 // 获取参数个数，不包含./a.out命令本身
 int get_opt_size(int argc);
 
@@ -25,5 +25,4 @@ void show_file_all_info(char* path);
 void show_file_names(char* path);
 
 
-
-"""
+```
