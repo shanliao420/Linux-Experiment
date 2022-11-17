@@ -6,3 +6,5 @@
 *.app
 
 *.json
+*.o
+*.so

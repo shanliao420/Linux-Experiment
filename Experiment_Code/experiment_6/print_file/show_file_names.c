@@ -26,11 +26,11 @@ void show_file_names(char dirname[])
 
 
 
-int main(int argc, char const *argv[])
-{
-    char path[] = "./";
-    show_file_names(path);
+// int main(int argc, char const *argv[])
+// {
+//     char path[] = "./";
+//     show_file_names(path);
 
 
-    return 0;
-}
+//     return 0;
+// }
