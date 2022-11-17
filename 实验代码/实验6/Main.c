@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
         break;
     case 1:
         if(have_l){
-            show_file_all_info("./");
+            show_file_names("./");
         }else{
             show_file_all_info(get_path(argc, argv));
         }
