@@ -10,7 +10,25 @@
 ### 需要完成的函数接口
 
 ```
-// 待补充
+void parse(char *buff, char** args){
+    printf("将buff解析为字符串数组\n");
+}
+
+void readKey(char* buff){
+    printf("读取键盘输入一行到buff\n");
+}
+
+void showPrompt(){
+    printf("显示提示信息！\n");
+}
+
+void childDo(char* command, char** args){
+    printf("使用exec系列函数运行命令\n");
+}
+
+void parentDo(int pid, int status){
+    printf("父进程做的事\n");
+}
 
 
 ```
