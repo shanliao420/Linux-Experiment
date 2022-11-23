@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include "parentDo.h"
 
 
 void parentDo(int pid, int status){
-    printf("父进程做的事\n");
+    if (pid = waitpid(pid, status, 0) < 0)
+        printf(" pid error!");
 }
