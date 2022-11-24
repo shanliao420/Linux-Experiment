@@ -3,5 +3,5 @@
 
 
 void showPrompt(){
-    printf("显示提示信息！\n");
+    printf("our_shell--->");
 }
