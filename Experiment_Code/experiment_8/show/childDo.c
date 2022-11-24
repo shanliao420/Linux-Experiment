@@ -11,9 +11,9 @@ void childDo(char* command, char** args){
 
 
 
-int main(int argc, char const *argv[])
-{
-    char *args[3] = {"ls", "-l", "./"};
-    childDo(*args, args);
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     char *args[3] = {"ps"};
+//     childDo(*args, args);
+//     return 0;
+// }
