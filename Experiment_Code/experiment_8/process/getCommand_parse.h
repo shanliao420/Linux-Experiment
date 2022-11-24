@@ -2,7 +2,7 @@
 #define _PARSE_
 
 
-void parse(char *buff, char** args);
+int parse(char *buff, char** args);
 
 
 #endif
