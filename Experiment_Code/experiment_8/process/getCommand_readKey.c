@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 #include "getCommand_readKey.h"
 #define MAXSIZE 4096
 
@@ -11,6 +12,10 @@ void readKey(char* buff){
         printf("error occurs!\n");
         exit(1);
     }
+    if(buff[strlen(buff) - 1] == "\n"){
+        buff[strlen(buff) - 1] = 0;
+    }
+    
 }
 
 

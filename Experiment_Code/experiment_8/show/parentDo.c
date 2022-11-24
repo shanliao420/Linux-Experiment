@@ -5,7 +5,7 @@
 #include "parentDo.h"
 
 
-void parentDo(int pid, int status){
+void parentDo(int pid, int* status){
     if (pid = waitpid(pid, status, 0) < 0)
         printf(" pid error!");
 }
