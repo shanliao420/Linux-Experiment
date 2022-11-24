@@ -1,7 +1,19 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "childDo.h"
 
 
 void childDo(char* command, char** args){
-    printf("使用exec系列函数运行命令\n");
+    execvp(command, args);
+    printf("could not execute %s\n", command);
+    exit(127);
+}
+
+
+
+int main(int argc, char const *argv[])
+{
+    char *args[3] = {"ls", "-l", "./"};
+    childDo(*args, args);
+    return 0;
 }
