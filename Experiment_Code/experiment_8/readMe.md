@@ -10,7 +10,7 @@
 ### 需要完成的函数接口
 
 ```
-void parse(char *buff, char** args){
+int parse(char *buff, char** args){
     printf("将buff解析为字符串数组\n");
 }
 
