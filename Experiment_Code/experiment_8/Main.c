@@ -9,7 +9,7 @@
 #define MAXSIZE 4096
 
 
-int main(int argc, char const *argv[])
+int main(int argc, char const *argv[], char *env[])
 {
     int pid;
     int status;
@@ -37,7 +37,9 @@ int main(int argc, char const *argv[])
             continue;
         }else if (pid == 0)
         {
-            childDo(*args, args);
+            char cmd[64] = "/bin/";
+            strcat(cmd, args[0]);
+            childDo(cmd, args, env);
         }
 
         parentDo(pid, &status);

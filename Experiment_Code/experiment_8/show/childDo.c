@@ -3,8 +3,8 @@
 #include "childDo.h"
 
 
-void childDo(char* command, char** args){
-    execvp(command, args);
+void childDo(char* command, char** args, char** env){
+    execve(command, args, env);
     printf("could not execute %s\n", command);
     exit(127);
 }
