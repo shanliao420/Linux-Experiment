@@ -9,12 +9,12 @@ int parse(char *buff, char** args){
 		while((*buff==' ')||(*buff=='\t'||(*buff=='\n')))
 			*buff++='\0';
 		*args++=buff;
-        num++;
+        ++num;
 		while((*buff!='\0')&&(*buff!=' ')&&(*buff!='\t')&&(*buff!='\n'))
 			buff++;
 	}
-	*args='\0';
-    return num;
+	*(--args)='\0';
+    return num - 1;
 }
 
 
