@@ -45,7 +45,7 @@ int main(int argc, char const *argv[], char *env[])
         {
             char cmd[64] = "/bin/";
             strcat(cmd, args[0]);
-            printf("the cmd is %s\n", cmd);
+            // printf("the cmd is %s\n", cmd);
             childDo(cmd, args, env);
         }
 
