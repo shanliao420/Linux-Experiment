@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <string.h>
 #include "getCommand_readKey.h"
 #define MAXSIZE 4096

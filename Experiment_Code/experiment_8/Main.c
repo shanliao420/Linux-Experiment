@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include "process/getCommand_parse.h"
 #include "process/getCommand_readKey.h"
@@ -9,7 +10,7 @@
 #define MAXSIZE 4096
 
 
-int main(int argc, char const *argv[])
+int main(int argc, char const *argv[], char *env[])
 {
     int pid;
     int status;
@@ -26,6 +27,11 @@ int main(int argc, char const *argv[])
         }
 
         arg_nums = parse(buff, args);
+        // printf("arg_nums = %d : ", arg_nums);
+        // for(int i = 0; i < arg_nums; i++){
+        //     printf("%s\t", args[i]);
+        // }
+        // printf("\n");
 
         if(!strcmp(args[0],"exit")){
             exit(0);
@@ -37,7 +43,10 @@ int main(int argc, char const *argv[])
             continue;
         }else if (pid == 0)
         {
-            childDo(*args, args);
+            char cmd[64] = "/bin/";
+            strcat(cmd, args[0]);
+            // printf("the cmd is %s\n", cmd);
+            childDo(cmd, args, env);
         }
 
         parentDo(pid, &status);
