@@ -1,9 +1,9 @@
 | 组号  | 成员                    | 任务   | 任务情况 |
 | :---- | :---------------------- | :----- | :------- |
 | 小组1 | 唐钰斌 胡桂飞    | Main.c | 完成   |
-| 小组1 | 苟明开 李思衡   | fork.c | 完成   |
-| 小组2 | 罗淞 颜志豪       | index_of_pipe.c | 完成   |
-| 小组3 | 李时进 施婷  | parent_process.c | 完成   |
-| 小组4 | 申黄琪 董静  | Command_parse.c | 完成   |
-| 小组5 | 龙月 刘维    | Command_readKey.c | 完成   |
-| 小组6 | 曾春琳 彭喆  | showPrompt.c | 完成   |
+| 小组2 | 苟明开 李思衡   | fork.c | 完成   |
+| 小组3 | 罗淞 颜志豪       | index_of_pipe.c | 完成   |
+| 小组4 | 李时进 施婷  | parent_process.c | 完成   |
+| 小组5 | 申黄琪 董静  | Command_parse.c | 完成   |
+| 小组6 | 龙月 刘维    | Command_readKey.c | 完成   |
+| 小组7 | 曾春琳 彭喆  | showPrompt.c | 完成   |
